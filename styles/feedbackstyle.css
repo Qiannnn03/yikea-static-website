@@ -1,0 +1,408 @@
+@charset "utf-8";
+
+/* Basic styles to be used with all devices and under all conditions */
+footer, header, nav, section { 
+    display: block;
+ }
+ 
+body, div, footer, header, html, img, 
+li, nav, nav a, p, section,  ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    background: transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;  
+}
+
+/* Set The Default Page Element Styles */
+body{
+    margin: 0px auto;
+    height: 200%;  
+    min-width: 320px;
+    max-width: 1200px;   
+    width: 100%;
+}
+
+h1, p{
+    margin-left: 20px;
+}
+
+html{
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Verdana, Geneva, sans-serif;
+    height: 100%;
+}
+
+/* Flex Layout */
+body{
+    background-color:rgb(230, 230, 255);
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    margin: auto;
+}
+
+header, footer{
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+ }
+
+div#container{
+    -webkit-flex: 1 0 auto;
+    flex: 1 0 auto;
+}
+
+/* Header styles */
+header{
+    background-color: rgb(204, 179, 255);
+}
+ 
+header img{
+    width: 150px;
+    float: left;
+    margin-top: 5px;
+}
+
+/* Navigation list styles */
+.nav-area{
+    float: right;
+    list-style: none;
+    margin-top: 50px;
+}
+ 
+.nav-area li{
+    display: inline-block;
+}
+ 
+.nav-area li a{
+    text-decoration: none;
+    padding: 5px 20px;
+    font-family: Bahnschrift;
+    font-size: 18px;
+    color: rgb(119, 0, 179);
+}
+ 
+.nav-area li a:hover{
+    color: white;
+}
+ 
+/* Navigation menu list styles */
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+  
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 35px;
+    text-decoration: none;
+    font-size: 40px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay {overflow-y: auto;}
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+}
+
+/* Customer Rating */
+.custReview{
+    width: 100%;
+    margin-top:5px;
+}
+
+.totalRate{
+    font-size: 30px;
+}
+
+.leftstar{
+    color: rgb(255, 208, 0);
+    text-shadow: 0.5px 0.2px 0 rgb(175, 158, 1);
+    font-size: 25px;
+    margin-top: 40px;
+    float: left;
+    width: 30%;
+    text-align: center;
+}
+
+.rightstar{
+    width: 70%;
+    float: left;
+}
+
+.col1Star {
+    float: left;
+    width: 15%;
+    margin-top:10px;
+}
+
+.col2Star {
+    margin-top:10px;
+    float: left;
+    width: 85%;
+}
+
+.starBar {
+    margin:10px 0 5px 0;
+    float: left;
+    width:75%;
+    background-color: white;
+}
+
+.bar5 {width: 85%; height: 15px; background-color: rgb(255, 190, 0);
+}
+.bar4 {width: 30%; height: 15px; background-color: rgb(255, 190, 0);
+}
+.bar3 {width: 6%; height: 15px; background-color: rgb(255, 190, 0);
+}
+.bar2 {width: 5%; height: 15px; background-color: rgb(255, 190, 0);
+}
+.bar1 {width: 2%; height: 15px; background-color: rgb(255, 190, 0);
+}
+
+fieldset.colorstar {
+    background-color:  #eeeeee;
+    border: initial;
+    margin: 10px auto 10px 15%;
+    width: 70%;
+}
+
+/* Star Rating */
+.starrate{
+    text-align: center;
+}
+
+.starrate input{
+    display: none;
+}
+
+.starrate input+label{
+    text-shadow: 1px 1px 0 yellow;
+    color: rgb(255, 208, 0);
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.starrate input:checked + label ~ label{
+    color:grey;
+}
+
+
+/* Input Styles */
+input.write{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 8px;
+    border: 0.5px solid rgb(78, 154, 240);
+    background-color: rgb(78, 154, 240);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input.write:hover{
+    background-color: rgb(78, 81, 240);
+}
+
+input[type=text],[type=mail]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea{
+    height:150px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+/* Label Styles */
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* Validation Styles */
+input#custname:focus:valid,
+input#custmail:focus:valid{
+   background-color: rgb(220, 255, 220);
+}
+
+input#custname:focus:invalid,
+input#custmail:focus:invalid {
+   background-color: rgb(255, 232, 233);
+}
+
+/* Submit Styles */
+.submit{
+    margin-top:5px;
+    background-color:#04AA6D;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 12px;
+    box-shadow: 0 5px grey;
+    float: right;
+    border: none;
+}
+
+.submit:hover {
+    background-color: #45a049;
+}
+
+
+/* Form Styles */
+fieldset.custform {
+    background-color: #eeeeee;
+    border: none;
+    padding: 5px;
+    margin: 20px;
+}
+
+
+/* Box Styles */
+.box {
+    display: none; 
+    position: absolute; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 200%;
+    overflow: auto; 
+    background-color: rgba(211, 144, 185, 0.5); 
+}
+
+.modal-content {
+    background-color:#eeeeee;
+    margin: auto;
+    border: 1px solid #888;
+    width: 40%;
+    border-radius: 5px;
+}
+
+/*  Close Button Style */
+.close {
+    color: grey;
+    float: right;
+    font-size: 30px;
+    margin:15px 20px;
+    cursor: pointer;
+}
+
+.close:hover{
+    color: black;
+}
+
+/* Customers' Feedback & Review Style */
+fieldset#output{
+    background-color: rgba(243, 203, 243, 0.726);
+    width: 94%;
+    font-size: 20px;
+    margin: 15px 4% 0 2%;
+ }
+ 
+span.emoji{
+    margin-left: 15px;
+    font-size: 100%;
+}
+
+/* Footer styles */   
+footer{
+    color: black;    
+    background:  rgb(204, 179, 255);   
+    font-size: 0.65em;  
+    font-style: normal;
+    height: 30px;
+    line-height: 30px;   
+    text-align: center;
+    margin-top: auto;
+}
+
+/* ===============================
+   Mobile Styles: 0px to 640px 
+   ===============================
+*/
+@media only screen and (max-width: 640px) {
+
+    a#navicon {
+        display: block;
+    }
+
+    header nav ul {
+        display: none;
+    }
+
+    header nav ul li {
+        font-size: 1em;
+        line-height: 1.3em;
+        height: 1.3em;
+    }
+
+    a#navicon:hover+ul, header nav ul:hover {
+        display: block;
+    }
+}
+
+/* =============================================
+   Tablet and Desktop Styles: greater than 640px
+   =============================================
+*/
+@media only screen and (min-width: 641px) {
+
+    header nav ul {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        -webkit-justify-content: center;
+        justify-content: center;
+    }
+
+    header nav ul li {
+        -webkit-flex: 0 1 auto;
+        flex: 0 1 auto;
+    }
+}

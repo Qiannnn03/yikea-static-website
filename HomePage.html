@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>  
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <link href="styles/homestyle.css" rel="stylesheet" /> 
+   <title>YI-KEA eCommerce Malaysia</title>
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <a href="homepage.html"><img src="images/logo.png" alt="logo"></a>
+            <ul class="nav-area">
+                <li><a href="Cart.html">CART</a></li>
+                <li><a href="LogIn.html">LOGIN</a></li>
+                <li><a href="#"><span onclick="openNav()">MENU &#10247</span></a></li>
+            </ul>
+        </div>
+        
+        <div id="Menu" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="Delivery.html">Comfirm Your Delivery Details</a>
+                <a href="Payment.html">Check Your Payment Here</a>
+                <a href="LiveChat.html">Come Here To Have A Live Chat</a>
+                <a href="FeedbackReview.html">Welcome Feeedback To Us !</a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="welcome-text">
+        <h1>Your home is Beautiful &#9825</h1>
+        <h3>- W I T H Y I - K E A -</h3>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            
+            <div class="col">
+                <div class="feature-img">
+                    <img src="images/furniture.png" width="100%">
+                    <img src="images/play.png" class="play-btn" 
+                    onclick="playVideo('media/Furnishings.mp4')">
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="furniture">
+                    <a href="Sofas.html">Sofas</a>
+                </div>
+                <div class="furniture">
+                    <a href="Chairs.html">Chairs, Stools & Benches</a> 
+                </div>
+                <div class="furniture">
+                    <a href="Tables.html">Tables & Desks</a>
+                </div>
+                <div class="furniture">
+                    <a href="Bookcases.html">Bookcases & Shelving Units</a>
+                </div>
+                <div class="furniture">
+                    <a href="Tv.html">TV & Media Furniture</a>
+                </div>
+                <div class="furniture">
+                    <a href="Beds.html">Bed Frames</a>                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-player" id="videoPlayer">
+        <video width="100%" controls autoplay id="myVideo">
+            <source src="media/Furnishings.mp4" type="video/mp4">
+        </video>
+        <img src="images/close.png" class="close-btn" 
+        onclick="stopVideo()">
+    </div>
+
+    <div class="about-us"> 
+        <h1>About YI-KEA</h1>
+    </div>
+
+    <div class="container2">
+        <div id="contents2">
+            <div class="text">
+                <div class="row2">   
+                    <article>
+                        <span style="color:black; font-weight: bold; font-family: Comic Sans MS;">Who We Are ?</span>
+                            <p>YI-KEA is an autenthic furniture store with retail outlet & online store. YI-KEA was created in 2021 July 11. Since then, the company has been growing everyday.</p><br><br>
+                        <span style="color:black; font-weight: bold; font-family: Comic Sans MS;">What We Sell ?</span>
+                            <p>We offer authentic of furniture related products in the market online such as Sofas, Chairs, Stools & Benches, Tables & Desks, Bookcases & Shelving Units, TV & Media Furniture, Bed Frames etc.</p><br><br>
+                        <span style="color:black; font-weight: bold; font-family: Comic Sans MS;">Why YI-KEA ?</span>
+                            <p>It's a new brand that brings affordability, design and comfort to people all over the world.
+                            One of the reasons we created the YI-KEA brand is to make everyday life better for many people. 
+                            In addition, due to the current pandemic COVID-19, people can’t go out and go to our physical store to buy furniture.
+                            So, we decided to design a website so that people can buy our furniture in a safe way.</p><br>
+
+                            <p> Explore the Yi-Kea story here, to learn more about our heritage, what drives us today and the ways we seek to positively impact people.
+                            Spread all over the world, we have a passion for home furnishing and an inspiring shared vision to create a better everyday life for the many people.
+                            This, together with our straightforward business idea, shared values, and a culture based on the spirit of togetherness, guides us in everything we do.</p> 
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq"> 
+        <h1>FAQ</h1>
+    </div>
+
+    <section>
+        <div class="content3">
+            <div class="question">
+                <h3>How Do I Buy Online ?</h3>
+            </div>
+            <div class="answer">
+                <p>These are general steps of your shopping journey with us:
+                <ol>
+                    <li>1. Choose your product, add to cart & amend quantity</li>
+                    <li>2. Check order details</li>
+                    <li>3. Confirm your shopping cart</li>
+                    <li>4. Provide shipping & billing information</li>
+                    <li>5. Choose payment options and finalize payment</li>
+                    <li>6. You will see the payment transaction status on your screen</li>
+                    <li>7. For successful transaction, we will email you the order confirmation shortly</li>
+                </ol>
+                </p>
+            </div>
+        </div>
+
+        <div class="content3">
+            <div class="question">
+                <h3>How To Online payment ?</h3>
+            </div>
+            <div class="answer">
+                <p>1.What payment methods do you accept ?
+                <ol>
+                    <li>You can pay with Visa and Mastercard and debit cards, and FPX.</li>
+                </ol>
+                </p>
+                <p>2.Is there an Instalment Payment Plan option in online?
+                    <ol>
+                        <li>We don't offer IPP Instalment plan sorry for the inconvience.</li>
+                    </ol>
+                </p>
+            </div>
+        </div>
+
+        <div class="content3">
+            <div class="question">
+                <h3>How Much Would Delivery Service Cost ?</h3>
+            </div>
+            <div class="answer">
+                <p>1. Delivery in WEST Malaysia
+                    <ol>
+                        <li>Parcel delivery RM25</li>
+                        <li>Truck delivery RM98</li>
+                        <li>Zone A RM 98</li>
+                        <li>Zone B RM163</li>
+                        <li>Zone C RM258</li><br>
+                        <li>*Order up to a weight of 24 kg, a volume of 84 litres,and a maximum length per item of 1.6 meter.</li>
+                    </ol>
+                </p>
+                <p>2. Delivery in EAST Malaysia
+                    <ol>
+                        <li>Parcel delivery (incl. shipment) RM100</li>
+                        <li>Truck delivery (incl. shipment) RM675 Only available in Kuching, Miri & Kota Kinabalu.</li>
+                        <li>Click & Collect RM575</li>
+                        <li>*Click & Collect includes shipment to East Malaysia, you can pick up your purchase from the nearest Click & Collect hubs:</li>
+                        <li>Zone C RM258</li><br>
+                        <li>*Order up to a weight of 24 kg, a volume of 84 litres,and a maximum length per item of 1.6 meter.</li><br>
+                        <li>The operating hours of Click and Collect point is as follows : </li>
+                        <li>Monday-Friday (9-6pm)</li>
+                        <li>Saturday (9-1pm)</li>
+                        <li>Sun and public holiday is closed.</li>
+                    </ol>
+                </p>
+            </div>
+        </div>
+
+        <div class="content3">
+            <div class="question">
+                <h3>What Information Collected When I Visit The Site ?</h3>
+            </div>
+            <div class="answer">
+                <p>The YI-KEA site works with all commonly used browsers, on both PC platforms. If you experience any issues during your visit on our website, please upgrade to the latest version.</p>
+            </div>
+        </div><br>
+    </section>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <script>
+        function openNav() {
+            document.getElementById("Menu").style.height = "100%";
+        }
+    
+        function closeNav() {
+            document.getElementById("Menu").style.height = "0%";
+        }
+
+        var videoPlayer = document.getElementById("videoPlayer");
+        var myVideo = document.getElementById("myVideo");
+        
+        function stopVideo(){
+            videoPlayer.style.display = "none";
+        }
+
+        function playVideo(file){
+            myVideo.src = file;
+            videoPlayer.style.display = "block";
+        }
+
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } 
+            else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+   
+    <footer>
+        &copy; Tarc YI-KEA eCommerce System by 2021
+    </footer>
+
+</body>
+</html>

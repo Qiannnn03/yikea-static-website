@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+    <head>
+        <title>Order Success</title>
+    </head>
+    <body style="background-color: #C2DFFF ;color:#4863A0 ;font-size:20px;">
+            <h1> Yikea </h1>
+
+            <p>
+                TOTAL ORDER PRICE:RM
+                <label id="GrandTotal"></label>
+                <script type="text/javascript">
+                    var totalOrderPrice = parseFloat(localStorage.getItem('totalPrice'));
+                    document.getElementById('GrandTotal').innerHTML = totalOrderPrice.toFixed(2);
+                </script>
+            </p>
+            Date: 
+            <script type="text/javascript">
+
+                //create date object and get current date from PC
+                var today=new Date();
+                var day=today.getDate();//day of the month
+                var month=today.getMonth()+1;
+                var year=today.getFullYear();
+
+                //display today object
+                document.write(today);
+                //display date in DD/MM/YYYY format
+                document.write("<h2>"+day+"/"+month+"/"+year+"</h2>");
+
+                </script>
+            <p>
+                <label id="customerFullName"></label>
+                <script type="text/javascript">
+                    var name = localStorage.getItem('custName');
+                    document.getElementById('customerFullName').innerHTML = name;
+                </script>, thanks for your purchase.
+            </p>
+    </body>
+</html>

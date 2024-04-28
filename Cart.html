@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="styles/homestyle.css" rel="stylesheet" />
+    <title>Shopping Cart</title>
+
+    <style>
+    h1,h3{
+        font-family:Times New Roman, Arial
+    }
+   .option{
+      padding:4px 10px ;
+     width: 50%;
+  box-shadow:1px 1px ;
+  font-size: 15px;
+      
+   }
+    .numbers{
+        text-align:right;  
+        width: 100px;
+    }
+
+    .numbers1{
+        text-align:right; 
+        background-color:pink; 
+    }
+
+    .table{
+        padding-top: 60px;
+        width: 85%;
+        margin: auto;
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+      
+    }
+
+    .table2{
+        text-align: left;
+        width: 85%;
+        margin: auto;
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+      
+    }
+    .amount{
+       box-shadow: 0px 2px;
+       text-align: right;
+    }
+    .button{
+        margin-left: 10%;
+        background-color: #5cb85c;
+        color: black;
+        padding: 12px 20px;
+        width: 25%;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;       
+   }
+   .cancelorder{
+        float: right;
+        margin-right: 10%;
+        background-color: #5cb85c;
+        color: black;
+        padding: 12px 20px;
+        width: 25%;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+   }
+    @media print{
+    header, input[type='reset'], input[type='submit'],input[type='button']{
+        display:none;
+        }
+    }
+    </style>
+
+    <script type="text/javascript" src="managecart.js"></script>
+    <script type="text/javascript">
+
+
+      function display(obj,num){
+          var price = "Price" + num;
+              if (obj.selectedIndex != 0){
+                  document.getElementById(price).value = obj.value;
+              }
+      }
+
+  
+
+  </script>
+</head>
+
+<body  style="background-image:linear-gradient(rgb(230, 230, 255),rgb(179, 179, 255)); height: 100%;">
+
+    <header>
+        <div>
+            <a href="homepage.html"><img src="images/logo.png" alt="logo"></a>
+            <ul class="nav-area">
+                <li><a href="Cart.html">CART</a></li>
+                <li><a href="LogIn.html">LOGIN</a></li>
+                <li><a href="#"><span onclick="openNav()">MENU &#10247</span></a></li>
+            </ul>
+        </div>
+        
+        <div id="Menu" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="Delivery.html">Comfirm Your Delivery Details</a>
+                <a href="Payment.html">Check Your Payment Here</a>
+                <a href="LiveChat.html">Come Here To Have A Live Chat</a>
+                <a href="FeedbackReview.html">Welcome Feeedback To Us !</a>
+            </div>
+        </div>
+    </header>
+
+<form name="book" id="book"  action="Delivery.html"  method="get">  
+   <table class="table">
+            <td colspan=3><hr></td>
+        </tr>
+        <tr>
+            <td><h4 style="margin-bottom:0px">Order Form - Cash on Delivery</h4></td>
+            <td><h4 style="float: right;" id="demo"></h4> </td>
+        </tr>
+        <tr>
+            <td colspan=3><hr></td>
+        </tr>
+    </table>
+
+    <table class="table2">
+        <tr>
+            <th>Furniture</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Amount (RM)</th>
+        </tr>
+    <tr>
+        <td>1.
+            <select id="desc1" class="option" name="desc1" onchange="display(this,1);">
+   	         <option>Sofa</option>
+               <option value="290.00">Glostad</option>
+   	         <option value="499.00">Klippan</option>
+   	         <option value="699.00">Softy</option>
+   	          <option value="320.00">Classicy</option>
+                <option value="759.00">Ektorp </option>
+                <option value="1200.00"> Strossa</option>
+                <option value="688.00">Lafye Black Pink Version </option>
+                <option value="599.00"> DM 2911 C Fassion</option>
+                <option value="1699.00">Extreme L Size Sofafa </option>
+                <option value="3599.00">Bed Size Sofas Furture</option>
+                <option value="789.00">Double L Sofas </option>
+                <option value="269.00">3-CK </option>
+                <option value="399.00">3L White Far </option>
+                <option value="129.00"> Grandpa House Taste</option>
+                <option value="380.00">Small Family Package </option>
+                <option value="1688.00">Black Summerai Extra </option>
+         
+            </select>
+        </td>
+        <td><input type="text" name="Price1"  id="Price1" readonly size=8 /></td>
+            <td>
+    
+    
+</body>
+</html>

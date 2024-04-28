@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Product Delivery</title>
+    <link href="styles/deliverystyle.css" rel="stylesheet"  type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <a href="homepage.html"><img src="images/logo.png" alt="logo"></a>
+            <ul class="nav-area">
+                <li><a href="Cart.html">CART</a></li>
+                <li><a href="LogIn.html">LOGIN</a></li>
+                <li><a href="#"><span onclick="openNav()">MENU &#10247</span></a></li>
+            </ul>
+        </div>
+        
+        <div id="Menu" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="Delivery.html">Comfirm Your Delivery Details</a>
+                <a href="Payment.html">Check Your Payment Here</a>
+                <a href="LiveChat.html">Come Here To Have A Live Chat</a>
+                <a href="FeedbackReview.html">Welcome Feeedback To Us !</a>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <h1>Shipping Address</h1>
+        <p style="color:rgb(146, 140, 140);">Please enter your shipping details</p>
+
+            <form action="payment.html">
+                <fieldset>
+                    <!--Contact-->
+                    <h3><i class="fa fa-phone-square"></i> Contact:</h3>
+                        <!--Customer's Name-->
+                        <div class="rowinfo">
+                            <div class="titleinfo">
+                                <label for="custname"><i class="fa fa-user" style="font-size:18px"></i> Full Name:</label>
+                            </div>
+                            <div class="info">
+                                <input type="text" id="custname" name="custname" placeholder="Enter your full name" required/>
+                            </div>
+                        </div>
+                        <!--Customer's Phone-->
+                        <div class="rowinfo">
+                            <div class="titleinfo">
+                                <label for="custphone"><i class="fa fa-phone" style="font-size:18px"></i> Phone Number:</label>
+                            </div>
+                            <div class="info">
+                                <input id="custphone" name="custphone" value=" +60" size="1" readonly>
+                                <input type="tel" id="custphone" name="custphone" placeholder="12 345 6789" maxlength="11" required/>
+                            </div>
+                        </div>
+                        <hr/>
+                    <!--Address-->
+                    <h3><i class="fa fa-address-card"></i> Address :</h3>
+                        <!--Customer's Street and Unit-->
+                        <div class="rowinfo">
+                            <div class="titleinfo">
+                                <label for="address"><i class="fa fa-home"style="font-size:18px"></i> Street and unit:</label>
+                            </div>
+                            <div class="info">
+                                <input type="text" id="address" name="address" placeholder="E.g. No 12, Jalan Badik 2, Taman Sri Tebrau" required/>
+                            </div>
+                        </div>
+                        <!--Customer's Postal Code-->
+                        <div class="rowinfo">
+                            <div class="titleinfo">
+                                <label for="postalcode"><i class="fa fa-map-signs" style="font-size:18px"></i> Postal Code:</label>
+                            </div>
+                            <div class="info">
+                                <input type="text" id="postalcode" name="postalcode"  placeholder="52000" maxlength="5" pattern="^\d{5}$" required />
+                            </div>
+                        </div>
+                        <!--Customer's City-->
+                        <div class="rowinfo">
+                            <div class="titleinfo">
+                                <label for="city"><i class="fa fa-institution" style="font-size:18px"></i> City:</label>
+                            </div>
+                            <div class="info">
+                                <input type="text" id="city" name="city" placeholder="City" required />
+                            </div>
+                        </div>
+                        <!--Customer's State-->
+                        <div class="rowinfo">
+                            <div class="titleinfo">
+                                <label for="state"><i class="fa fa-map-marker" style="font-size:18px"></i> State:</label>
+                            </div>
+                            <div class="info">
+                                <input type="text" id="state" name="state" list="dishType" placeholder="State" required/>
+                                <datalist id="dishType">
+                                <option value="Johor">Johor</option>
+                                <option value="Kedah">Kedah</option>
+                                <option value="Kelantan">Kelantan</option>
+                                <option value="Kuala Lumpur">Kuala Lumpur</option>
+                                <option value="Labuan">Labuan</option>
+                                <option value="Melaka">Melaka</option>
+                                <option value="Negeri Sembilan">Negeri Sembilan</option>
+                                <option value="Pahang">Pahang</option>
+                                <option value="Penang">Penang</option>
+                                <option value="Perak">Perak</option>
+                                <option value="Perlis">Perlis</option>
+                                <option value="Putrajaya">Putrajaya</option>
+                                <option value="Sabah">Sabah</option>
+                                <option value="Sarawak">Sarawak</option>
+                                <option value="Selangor">Selangor</option>
+                                <option value="Terengganu">Terengganu</option>
+                                </datalist>
+                            </div>
+                        </div>
+                        <!--Label as office/home-->
+                        <div class="rowinfo">
+                            <div class="titleinfo">
+                                <label>Label As:</label>
+                            </div>
+                            <div class="info">
+                                <input type="radio" id="office" name="address" value="Office" required />
+                                <label for="office">Office</label>
+                                <input type="radio" id="home" name="address" value="Home" required/>
+                                <label for="home">Home</label>
+                            </div>
+                        </div>
+                        <br>
+                        <!-- Next / Reset Button -->
+                        <div class="rowinfo">
+                            <input type="submit" value="Next" />
+                            &nbsp;
+                            <input type="reset" value="Reset">
+                        </div>
+                </fieldset>
+            </form>
+    </section>
+
+    <script>
+        function openNav() {
+            document.getElementById("Menu").style.height = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("Menu").style.height = "0%";
+        }
+    </script>
+
+    <footer>
+        &copy; Tarc YI-KEA eCommerce System by 2021
+    </footer>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <link href="styles/homestyle.css" rel="stylesheet"  type="text/css" /> 
+   <link href="styles/chatstyle.css" rel="stylesheet" type="text/css" />
+   <script src="scripts/respond.js"></script>
+   <title>YI-KEA eCommerce Malaysia</title>
+</head>
+
+<body style="height: 100%;">
+
+    <header>
+        <div>
+            <a href="homepage.html"><img src="images/logo.png" alt="logo"></a>
+            <ul class="nav-area">
+                <li><a href="Cart.html">CART</a></li>
+                <li><a href="LogIn.html">LOGIN</a></li>
+                <li><a href="#"><span onclick="openNav()">MENU &#10247</span></a></li>
+            </ul>
+        </div>
+        
+        <div id="Menu" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="Delivery.html">Comfirm Your Delivery Details</a>
+                <a href="Payment.html">Check Your Payment Here</a>
+                <a href="LiveChat.html">Come Here To Have A Live Chat</a>
+                <a href="FeedbackReview.html">Welcome Feeedback To Us !</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="header1">
+        <h1>Live Chat</h1>
+    </div>
+            
+            <div id="chatborder">
+                <p id="chatlog7" class="chatlog">&nbsp;</p><br/>
+                <p id="chatlog6" class="chatlog">&nbsp;</p><br/>
+                <p id="chatlog5" class="chatlog">&nbsp;</p><br/>
+                <p id="chatlog4" class="chatlog">&nbsp;</p><br/>
+                <p id="chatlog3" class="chatlog">&nbsp;</p><br/>
+                <p id="chatlog2" class="chatlog">&nbsp;</p><br/>
+                <p id="chatlog1" class="chatlog">&nbsp;</p><br/>
+              <input type="text" name="chat" id="chat" placeholder="Press here to start chatting!" onfocus="getfocus();">
+            </div>
+
+
+    <script>
+        function openNav() {
+            document.getElementById("Menu").style.height = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("Menu").style.height = "0%";
+        }
+    </script>
+
+    <footer>
+        &copy; Tarc YI-KEA eCommerce System by 2021
+    </footer>
+
+</body>
+</html>

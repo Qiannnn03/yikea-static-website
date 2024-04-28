@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="styles/loginstyle.css">
+<link rel="stylesheet" href="styles/homestyle.css">
+<title>Login and Registrtion Form</title>
+
+<script type="text/javascript">
+   var usersArray = ["Admin","1111","User","2222"];
+
+function checkUserName(userName){
+    var userInput = String(document.getElementById('userIdLogin').value);
+    userInput = userInput.toLowerCase();
+    if( userName.toLowerCase() === userInput){
+        return userName;
+    }
+}
+
+function myFunction(){
+    var UserNameIndex = usersArray.findIndex(checkUserName);
+    var InputUserName = usersArray.find(checkUserName);
+
+    if(InputUserName === null){
+        alert('Invalid user name.');
+        document.getElementById('userIdLogin').value = "";
+        document.getElementById('pwLogin').value = "";
+        document.getElementById('userLogin').focus();
+    }
+    else{
+        if(usersArray[UserNameIndex + 1] != document.getElementById('pwLogin').value){
+            alert('Incorrect password.');
+            document.getElementById('pwLogin').value = "";
+            document.getElementById('pwLogin').focus();
+        }
+        else{
+            localStorage.setItem("userIdLogin",usersArray[UserNameIndex]);
+            document.login.submit();
+        }
+    }
+}
+</script>
+<script >
+
+    var usersArray1 = ["Admin","1111","User","2222"];
+    
+    function checkUserName(userName1){
+        var userInput1 = String(document.getElementById('userIdRegister').value);
+        userInput1 = userInput1.toLowerCase();
+        if( userName1.toLowerCase() == userInput1){
+            return userName1;
+        }
+    }
+    
+    function myFunction1(){
+        var UserNameIndex1 = usersArray1.findIndex(checkUserName);
+        var InputUserName1 = usersArray1.find(checkUserName);
+    
+        if(InputUserName1 === null){
+            alert('Invalid user name.');
+            document.getElementById('userIdRegister').value = "";
+            document.getElementById('pwRegister').value = "";
+            document.getElementById('userRegister').focus();
+            
+        }
+        else{
+            if(usersArray1[UserNameIndex1 + 1] != document.getElementById('pwRegister').value){
+                alert('Incorrect password.');
+                document.getElementById('pwRegister').value = "";
+                document.getElementById('pwRegister').focus();
+                
+            }
+            else{
+                localStorage.setItem("userIdRegister",usersArray1[UserNameIndex1]);
+                document.login.submit();
+                
+            }
+        }
+    }
+</script>
+
+</head>
+
+<body style="height: 100%;">
+  
+    <header>
+        <div>
+            <a href="homepage.html"><img src="images/logo.png" alt="logo"></a>
+            <ul class="nav-area">
+                <li><a href="Cart.html">CART</a></li>
+                <li><a href="LogIn.html">LOGIN</a></li>
+                <li><a href="#"><span onclick="openNav()">MENU &#10247</span></a></li>
+            </ul>
+        </div>
+        
+        <div id="Menu" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="Delivery.html">Comfirm Your Delivery Details</a>
+                <a href="Payment.html">Check Your Payment Here</a>
+                <a href="LiveChat.html">Come Here To Have A Live Chat</a>
+                <a href="FeedbackReview.html">Welcome Feeedback To Us !</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero">
+
+        <div class="form-box">
+        <br>
+        <marquee><h2><i><b>Welcome to our furniture shop </b></i><h2></marquee>
+        <div class="button-box">
+        <div id="btn"></div>
+        <button type="button" class="toggle-but" onclick="login()">Login</button>
+        <button type="button" class="toggle-but" onclick="register()">Register</button>
+        </div>
+
+        <form id="login" class="input-group" action="HomePage.html" method="get">
+
+        <input  type="text" id="userIdLogin"  class="input-field" name="name" placeholder="User Id" required>
+        <input  type="password"  id="pwLogin"  class="input-field"  name="enter password" placeholder="Enter password" required><br><br><br><br>          
+        <input type="checkbox" class="chech-box"><span>Remember Password</span>
+        <button onclick="myFunction();" type="submit" class="submit-btn" >Login</button>
+        
+        </form>
+
+        <form id="register" class="input-group" action="register.html" method="get">
+
+        <input  type="text"   class="input-field" name="name" placeholder="Name" required>
+        <input type="text"  id="userIdRegister"  class="input-field" name="user id"   placeholder="User Id" pattern="[a-zA-Z]{0,30}" oninvalid="this.setCustomValidity('Please enter your name')" oninput="this.setCustomValidity('')" required/>            
+        <input  type="text"   class="input-field"  placeholder="Email" required>
+        <input  type="password"   id="pwRegister" class="input-field"   placeholder="Enter Password" required><br>
+        <input type="checkbox" class="chech-box"><span>I agree to the terms & conditions</span>
+        <button  onclick="myFunction1();" type="submit" class="submit-btn" >Register</button>
+
+        </form>
+
+        </div>
+        </div>
+
+
+        <script>
+           
+         function openNav() {
+         document.getElementById("Menu").style.height = "100%";
+                }
+                
+         function closeNav() {
+         document.getElementById("Menu").style.height = "0%";
+                }
+            
+                var x = document.getElementById("login");
+                var y = document.getElementById("register");
+                var z = document.getElementById("btn");
+            
+                function register() {
+                    x.style.left = "-400px";
+                    y.style.left = "50px";
+                    z.style.left = "110px";
+                }
+            
+                function login() {
+                    x.style.left = "50px";
+                    y.style.left = "450px";
+                    z.style.left = "0px";
+                }
+        </script>
+    
+    <footer>
+        &copy; Tarc YI-KEA eCommerce System by 2021
+    </footer>
+
+</body>
+</html>

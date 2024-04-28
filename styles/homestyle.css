@@ -1,0 +1,418 @@
+@charset "utf-8";
+
+/* Basic styles to be used with all devices and under all conditions */
+article, aside, figcaption, figure,
+footer, header, main, nav, section { 
+   display: block;
+}
+
+address, article, aside, blockquote, body, cite, 
+div, dl, dt, dd, em, figcaption, figure, footer, 
+h1, h2, h3, h4, h5, h6, header, html, img, 
+li, main, nav, nav a, ol, p, section, span, ul,
+table, tr, td, th, col, colgroup {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   background: transparent;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;  
+}
+
+/* Set the default page element styles */
+body{
+   line-height: 1.2em;
+   height: auto;   
+   margin: 0px auto;
+   min-width: 320px;
+   max-width: 1200px;   
+   width: 100%;
+}
+
+ul, ol {
+   list-style: none;
+}
+
+nav ul {
+   list-style: none;
+   list-style-image: none;
+}
+
+nav a {
+   text-decoration: none;
+}
+
+html{
+   background-image: url(images/background.jpg);
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   font-family: Verdana, Geneva, sans-serif;
+   height: 100%;
+}
+
+
+/* Flex Layout */
+body{
+   background-image:linear-gradient(rgb(230, 230, 255),rgb(179, 179, 255));
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow: column nowrap;
+   flex-flow: column nowrap;
+   margin: auto;
+}
+
+header, footer{
+   -webkit-flex-shrink: 0;
+   flex-shrink: 0;
+}
+
+div#container{
+   -webkit-flex: 1 0 auto;
+   flex: 1 0 auto;
+}
+
+/* Header styles */
+header{
+   background-color: rgb(204, 179, 255);
+}
+
+header img{
+   width: 150px;
+   float: left;
+   margin-top: 5px;
+}
+
+/* Navigation list styles */
+.nav-area{
+   float: right;
+   list-style: none;
+   margin-top: 50px;
+}
+
+.nav-area li{
+   display: inline-block;
+}
+
+.nav-area li a{
+   text-decoration: none;
+   padding: 5px 20px;
+   font-family: Bahnschrift;
+   font-size: 18px;
+   color: rgb(119, 0, 179);
+}
+
+.nav-area li a:hover{
+   color: white;
+}
+
+/* Navigation menu list styles */
+.overlay {
+   height: 0%;
+   width: 100%;
+   position: fixed;
+   z-index: 1;
+   top: 0;
+   left: 0;
+   background-color: rgb(0,0,0);
+   background-color: rgba(0,0,0, 0.9);
+   overflow-y: hidden;
+   transition: 0.5s;
+}
+ 
+.overlay-content {
+   position: relative;
+   top: 25%;
+   width: 100%;
+   text-align: center;
+   margin-top: 30px;
+}
+ 
+.overlay a {
+   padding: 35px;
+   text-decoration: none;
+   font-size: 40px;
+   color: #818181;
+   display: block;
+   transition: 0.3s;
+}
+ 
+.overlay a:hover, .overlay a:focus {
+   color: #f1f1f1;
+}
+ 
+.overlay .closebtn {
+   position: absolute;
+   top: 20px;
+   right: 45px;
+   font-size: 60px;
+}
+ 
+@media screen and (max-height: 450px) {
+   .overlay {overflow-y: auto;}
+   .overlay a {font-size: 20px}
+   .overlay .closebtn {
+   font-size: 40px;
+   top: 15px;
+   right: 35px;
+   }
+}
+ 
+/* Main Section styles */
+.welcome-text{
+   padding: 50px;
+   text-align: left;
+}
+
+.welcome-text h1{
+   color: rgb(119, 0, 179);
+   font-size: 45px;
+   font-family: Segoe Script;
+}
+
+.welcome-text h3{
+   color: rgb(255, 102, 179);
+   padding-top: 5px;
+   font-size: 20px;
+   font-family: Calibri Light;
+}
+
+.row{
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   height:500px;
+}
+
+.col{
+   flex-basis: 50%;
+   min-width: 250px;
+}
+
+.feature-img{
+   width: 83%;
+   margin: auto;
+   position: relative;
+   border-radius: 10px;
+   overflow: hidden;
+}
+
+.furniture{
+   display: flex;
+   background: white;
+   margin: 20px 0;
+   align-items: center;
+   border-radius: 6px;
+   overflow: hidden;
+   width: 85%;
+   padding-top: 8px;
+   padding-bottom: 8px;
+}
+
+.furniture:hover{
+   background: rgb(204, 153, 255);
+}
+
+.furniture a{
+   margin-left: 130px;
+   color: rgb(119, 0, 179);
+   line-height: 22px;
+   font-size: 18px;
+   text-decoration: none;
+}
+
+.furniture a:hover{
+   color: whitesmoke;
+}
+
+.play-btn{
+   width: 130px;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%,-50%);
+   cursor: pointer;
+}
+
+.video-player{
+   width: 900px;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%,-50%);
+   display: none;
+}
+
+.close-btn{
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   width: 30px;
+   cursor: pointer;
+}
+
+/* About Us */
+h1{
+   padding-bottom: 70px;
+}
+
+.about-us{
+   padding-left:5%; 
+   padding-bottom: 50px;
+   padding-top: 30px;
+   text-align: left;
+   color: rgb(119, 0, 179);
+   font-size: 40px;
+   font-family: Segoe Script;
+}
+
+.text{
+   font-family: "Calibri Light";
+   font-size: 16px;
+}
+
+.container2{
+   background-image: url("images/pic1.png");
+   background-repeat: no-repeat;
+   background-position: right;
+   background-size:75%;
+   margin-right: 30px;
+}
+
+.container2:hover{
+   background-image: url("images/pic2.png");
+}
+
+#contents2{
+   display: flex;
+   margin: 0px auto;
+   margin-left: 30px; 
+   flex: 1;
+   width: 100%;
+   justify-content: center;
+   padding-top: 15px;
+   padding-bottom: 15px;
+   justify-content: center;
+   height:50%;
+   
+}
+   
+.row2{
+   float: left;
+   width: 50%;
+   padding: 10px;
+   height: 525px;
+   background-color: rgb(153, 230, 255);
+}
+
+/* FAQ */
+.faq{
+   padding-top: 100px;
+   padding-left:5%; 
+   text-align: left;
+   color: rgb(119, 0, 179);
+   font-size: 40px;
+   font-family: Segoe Script;
+}
+
+
+
+.content3{
+   padding-left: 100px;
+   max-width: 1000px;
+   margin-top: 2rem;
+   padding-bottom: 1rem;
+   border-bottom: 2px solid white;
+}
+
+
+.question h3{
+   font-size: 1.2rem;
+}
+
+.answer p{
+   padding-top: 1rem;
+   line-height: 1.6;
+   font-size: 1rem;
+}
+
+/* Back to top*/
+#myBtn {
+   display: none;
+   position: fixed;
+   bottom: 20px;
+   right: 30px;
+   z-index: 99;
+   font-size: 18px;
+   border: none;
+   outline: none;
+   background-color: rgb(153, 255, 153);
+   color: black;
+   cursor: pointer;
+   padding: 15px;
+   border-radius: 4px;
+}
+ 
+#myBtn:hover {
+   background-color: white;
+}
+
+/* Footer styles */   
+footer{
+   color: black;    
+   background:  rgb(204, 179, 255);   
+   font-size: 0.65em;  
+   font-style: normal;
+   height: 30px;
+   line-height: 30px;   
+   text-align: center;
+   margin-top: auto;
+}
+
+/* ===============================
+   Mobile Styles: 0px to 640px 
+   ===============================
+*/
+@media only screen and (max-width: 640px) {
+
+   
+   a#navicon {
+      display: block;
+   }
+   
+   header nav ul {
+      display: none;
+   }
+   
+   header nav ul li {
+      font-size: 1em;
+      line-height: 1.3em;
+      height: 1.3em;
+   }
+   
+   a#navicon:hover+ul, header nav ul:hover {
+      display: block;
+   }
+}
+
+/* =============================================
+   Tablet and Desktop Styles: greater than 640px
+   =============================================
+*/
+@media only screen and (min-width: 641px) {
+
+   header nav ul {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+      -webkit-justify-content: center;
+      justify-content: center;
+   }
+   
+   header nav ul li {
+      -webkit-flex: 0 1 auto;
+      flex: 0 1 auto;
+   }
+}

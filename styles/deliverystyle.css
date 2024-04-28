@@ -1,0 +1,293 @@
+@charset "utf-8";
+
+/* Basic styles to be used with all devices and under all conditions */
+footer, header, nav, section { 
+   display: block;
+}
+
+body, div, footer, header, html, img, 
+li, nav, nav a, p, section, span, ul {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   background: transparent;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;  
+}
+
+/* Set Tthe Default Page Element Styles */
+body{
+    margin: 0px auto;
+    line-height: 1.2em;
+    height: 100%;  
+    min-width: 320px;
+    max-width: 1200px;   
+    width: 100%;
+}
+
+h1, p{
+    margin-left: 20px;
+}
+
+html{
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Verdana, Geneva, sans-serif;
+    height: 100%;
+}
+
+/* Flex Layout */
+body{
+    background-color: rgb(230, 230, 255);
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    margin: auto;
+}
+header, footer{
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+ }
+
+div#container{
+    -webkit-flex: 1 0 auto;
+    flex: 1 0 auto;
+}
+
+/* Header styles */
+header{
+    background-color: rgb(204, 179, 255);
+}
+ 
+header img{
+    width: 150px;
+    float: left;
+    margin-top: 5px;
+}
+
+/* Navigation list styles */
+.nav-area{
+    float: right;
+    list-style: none;
+    margin-top: 50px;
+}
+ 
+.nav-area li{
+    display: inline-block;
+}
+ 
+.nav-area li a{
+    text-decoration: none;
+    padding: 5px 20px;
+    font-family: Bahnschrift;
+    font-size: 18px;
+    color: rgb(119, 0, 179);
+}
+ 
+.nav-area li a:hover{
+    color: white;
+}
+ 
+/* Navigation menu list styles */
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+  
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 35px;
+    text-decoration: none;
+    font-size: 40px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay {overflow-y: auto;}
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+}
+
+/* Fieldset Styles */
+fieldset {
+    background-color: #eeeeee;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 0.85em;
+    margin: 10px;
+}
+
+/* Label Styles*/
+label{
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+div.titleinfo {
+    float: left;
+    width: 20%;
+    margin-top: 5px;
+}
+
+/* Input Styles */
+input{
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+}
+
+input[type=text]{
+    width: 95%;
+}
+
+div.info {
+    float: left;
+    width: 80%;
+    margin-top: 6px;
+}
+
+.rowinfo:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    div.titleinfo, div.info{
+        width: 100%;
+        margin-top: 0;
+    }
+    }
+    
+/* Submit Button Styles */
+input[type=submit],[type=reset]{
+    background-color: #5cb85c;
+    color: black;
+    padding: 12px 20px;
+    width: 25%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type=reset]{
+    float: right;
+}
+input[type=submit]:hover,
+input[type=reset]:hover{
+    background-color:#45a049;
+}
+
+/* Validation Styles */
+input#custname:focus:valid,
+input#custphone:focus:valid,
+input#address:focus:valid,
+input#postalcode:focus:valid,
+input#city:focus:valid,
+input#state:focus:valid {
+   background-color: rgb(220, 255, 220);
+}
+
+input#custname:focus:invalid,
+input#custphone:focus:invalid,
+input#address:focus:invalid,
+input#postalcode:focus:invalid,
+input#city:focus:invalid,
+input#state:focus:invalid {
+   background-color: rgb(255, 232, 233);
+}
+
+/* Footer styles */   
+footer{
+    color: black;    
+    background:  rgb(204, 179, 255);   
+    font-size: 0.65em;  
+    font-style: normal;
+    height: 30px;
+    line-height: 30px;   
+    text-align: center;
+    margin-top: auto;
+}
+
+/* ===============================
+   Mobile Styles: 0px to 640px 
+   ===============================
+*/
+@media only screen and (max-width: 640px) {
+
+   
+    a#navicon {
+       display: block;
+    }
+    
+    header nav ul {
+       display: none;
+    }
+    
+    header nav ul li {
+       font-size: 1em;
+       line-height: 1.3em;
+       height: 1.3em;
+    }
+    
+    a#navicon:hover+ul, header nav ul:hover {
+       display: block;
+    }
+ }
+ 
+ /* =============================================
+    Tablet and Desktop Styles: greater than 640px
+    =============================================
+ */
+ @media only screen and (min-width: 641px) {
+ 
+    header nav ul {
+       display: -webkit-flex;
+       display: flex;
+       -webkit-flex-flow: row nowrap;
+       flex-flow: row nowrap;
+       -webkit-justify-content: center;
+       justify-content: center;
+    }
+    
+    header nav ul li {
+       -webkit-flex: 0 1 auto;
+       flex: 0 1 auto;
+    }
+ }

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Payment Form</title>
+        <link rel="stylesheet" href="styles/paymentstyle.css">
+        <script type="text/javascript" src="scripts/payment.js"></script>
+    </head>
+    <body>
+        <header>
+            <div>
+                <a href="HomePage.html"><img src="images/logo.png" alt="logo"></a>
+                <ul class="nav-area">
+                    <li><a href="Cart.html">CART</a></li>
+                    <li><a href="LogIn.html">LOGIN</a></li>
+                    <li><a href="#"><span onclick="openNav()">MENU &#10247</span></a></li>
+                </ul>
+            </div>
+            
+            <div id="Menu" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="overlay-content">
+                    <a href="Delivery.html">Comfirm Your Delivery Details</a>
+                    <a href="Payment.html">Check Your Payment Here</a>
+                    <a href="LiveChat.html">Come Here To Have A Live Chat</a>
+                    <a href="FeedbackReview.html">Welcome Feeedback To Us !</a>
+                </div>
+            </div>
+        </header>
+        
+            <div class="A">
+                    <div class="container">
+                            <div class="information"> 
+                                <div class="row">
+                                
+                                <h1 style="font-size: 20px;padding-bottom: 30px"><b>Please Fill In Your Information</b></h1>
+                                <fieldset>
+                                <label for="fname">Card Types</label>
+                                <img src="images/payment/vi.png" alt="visacard" width="100px" height="60px"/>
+                                <img src="images/payment/mc.png" alt="visacard" width="100px" height="60px"/>
+                                <img src="images/payment/pp.png" alt="visacard" width="100px" height="60px"/>
+
+                                <form name="payment" id="payment" action="HomePage.html" method="get" >
+                                    <label for="chname">Cardholder Name</label>
+                                    <input type="text" id="chname" name="chname" placeholder="Full Name" required/>
+
+                                    <label for="ccnum">Credit Card Number</label>
+                                    <input type="text" id="ccnum" name="creditcardnumber" placeholder="**** **** **** ****" maxlength="16" required/>
+
+                                    <label for="expmonth">Expiration Month</label>
+                                    <input type="text" id="expmonth" name="expmonth" placeholder="July" required/>
+
+                                    <label for="expyear">Expiration Year </label>
+                                    <input type="text" id="expyear" name="expyear" placeholder="2021" required/>
+
+                                    <label for="cvv">CVV</label>
+                                    <input type="password" id="cvv" name="cvv" placeholder="***" required/>
+                                    </fieldset> 
+                                    
+                                    <label class="checkbox">
+                                    <input type="checkbox" name="sameadr" required > Shipping address same as billing 
+                                    </label>  
+                                    <input type="submit" value="Submit Payment" id="submit" name="button" onclick="submitbtn();">
+                                    <input type="button" value="Cancel Payment" onclick="cancelbtn()">
+                                </form> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <script>
+            function openNav() {
+                document.getElementById("Menu").style.height = "100%";
+            }
+            function closeNav() {
+                document.getElementById("Menu").style.height = "0%";
+            }
+        </script>
+
+        <footer>
+            &copy; Tarc YI-KEA eCommerce System by 2021
+        </footer>
+
+    </body>
+    </html>

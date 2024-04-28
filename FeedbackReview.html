@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+    <head lang="en">
+
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Feedback & Review</title>
+        <link rel="stylesheet" href="styles/feedbackstyle.css" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+    <script type="text/javascript" src="feedback.js"></script>
+
+    </head>
+
+    <body style="height: 100%;">
+
+    <header>
+        <div>
+            <a href="homepage.html"><img src="images/logo.png" alt="logo"></a>
+            <ul class="nav-area">
+                <li><a href="Cart.html">CART</a></li>
+                <li><a href="LogIn.html">LOGIN</a></li>
+                <li><a href="#"><span onclick="openNav()">MENU &#10247</span></a></li>
+            </ul>
+        </div>
+        
+        <div id="Menu" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="Delivery.html">Comfirm Your Delivery Details</a>
+                <a href="Payment.html">Check Your Payment Here</a>
+                <a href="LiveChat.html">Come Here To Have A Live Chat</a>
+                <a href="FeedbackReview.html">Welcome Feeedback To Us !</a>
+            </div>
+        </div>
+    </header>
+
+    <section>
+      <h1>Customers' Star Rating : </h1>
+
+      <fieldset class="colorstar">
+        
+        <div class="custReview">
+
+          <div class="leftstar">
+            <div class="totalRate">4.9 / 5.0</div>
+            <div class="custStar">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-full"></i>
+            </div>
+          </div>
+
+          <div class="rightstar">
+
+            <div class="rowStar">
+              <div class="col1Star">
+                <div>5 &#11088;</div>
+              </div>
+              <div class="col2Star">
+                <div class="starBar">
+                    <div class="bar5"></div>
+                </div> 
+              </div>
+            </div>
+
+            <div class="rowStar">
+              <div class="col1Star">
+                <div>4 &#11088;</div>
+              </div>
+              <div class="col2Star">
+                <div class="starBar">
+                    <div class="bar4"></div>
+                </div> 
+              </div>
+            </div>
+
+            <div class="rowStar">
+              <div class="col1Star">
+                <div>3 &#11088;</div>
+              </div>
+              <div class="col2Star">
+                <div class="starBar">
+                    <div class="bar3"></div>
+                </div> 
+              </div>
+            </div>
+
+            <div class="rowStar">
+              <div class="col1Star">
+                <div>2 &#11088;</div>
+              </div>
+              <div class="col2Star">
+                <div class="starBar">
+                    <div class="bar2"></div>
+                </div> 
+              </div>
+            </div>
+          
+            <div class="rowStar">
+              <div class="col1Star">
+                <div>1 &#11088;</div>
+              </div>
+              <div class="col2Star">
+                <div class="starBar">
+                    <div class="bar1"></div>
+                </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+       
+        <br style="clear: both;">
+        <hr style="clear: both;">
+        <b>Please Review Our Product!</b>
+        <!-- Write the review -->
+        <div style="clear: both;">
+        <input id="write" class="write" type="button" value="&#9997; Write the review"/>
+        </div>
+
+        <div id="myBox" class="box">
+
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <fieldset class="custform">
+              <form action="">
+
+                <div class="row">
+                  <div class="starrate">
+                    <b>Star Rating:</b>
+                    <input type="radio" id="star1" name="star">
+                    <label for="star1" class="fa fa-star"></label>
+                    <input type="radio" id="star2" name="star">
+                    <label for="star2" class="fa fa-star"></label>
+                    <input type="radio" id="star3" name="star">
+                    <label for="star3" class="fa fa-star"></label>
+                    <input type="radio" id="star4" name="star">
+                    <label for="star4" class="fa fa-star"></label>
+                    <input type="radio" id="star5" name="star">
+                    <label for="star5" class="fa fa-star"></label>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-1">
+                    <label for="name">Your Name</label>
+                  </div>
+                  <div class="col-2">
+                    <input type="text" id="custname" name="custname" placeholder="Enter your name.. " required>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-1">
+                      <label for="email">E-mail address</label>
+                  </div>
+                  <div class="col-2">
+                      <input type="mail" id="custmail" name="custmail" placeholder="xx@xxx.xxx"  required/>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-1">
+                    <label for="custcomment">Comment</label>
+                  </div>
+                  <div class="col-2">
+                    <textarea id="custcomment" name="custcomment" placeholder="Enter your review for our product &#128221;!"></textarea>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <input type="submit" id="submit" class="submit" value="&#9993; Submit Review" />
+                </div>
+
+                </form>
+            </fieldset>
+          </div>
+        </div>
+
+      </fieldset>
+    </section>
+        <!--Output-->
+        <b style="margin:10px 0 0 20px;font-size: 20px;">Customers' Feedback & Review : </b>
+        <div id="output"></div>
+
+    <footer>
+        &copy; Tarc YI-KEA eCommerce System by 2021
+    </footer>
+
+      <script>
+
+        var box = document.getElementById("myBox");
+        
+        //  Button that opens the reviews
+        var btn = document.getElementById("write");
+        
+        // Span element that closes the review
+        var closebtn = document.getElementsByClassName("close")[0];
+        
+        // When clicks the button, open the review 
+        btn.onclick = function() {
+          box.style.display = "block";
+        }
+        
+        // When clicks on <span> (x), close the review
+        closebtn.onclick = function() {
+          box.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == box) {
+            box.style.display = "none";
+          }
+        }
+
+        /* Menu */
+        function openNav() {
+            document.getElementById("Menu").style.height = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("Menu").style.height = "0%";
+        }
+
+        /* Store Customer Feedback*/
+        var custname = document.getElementById("custname");
+        var custcomment = document.getElementById("custcomment");
+        var submit = document.getElementById("submit");
+        var output = document.getElementById("output");
+        submit.onclick = function(){
+          var name = custname.value;
+          var comment = custcomment.value;
+          console.log(name);
+          console.log(comment);
+          if(name && comment){
+            localStorage.setItem(name,comment);
+            location.reload();
+          }
+        };
+        for(var i=0;i<localStorage.length;i++){
+          var name = localStorage.key(i);
+          var comment = localStorage.getItem(name);
+          output.innerHTML += "<fieldset id='output'>" + "<b>"+[name] + "</b>" + "<span class='emoji'>&#11088 &#11088 &#11088 &#11088 &#11088 </span>" + "</br><span style='font-size: 20px;'> : "  + [comment] + "</fieldset> " ;
+        }
+  
+        </script>
+    </body>
+</html>
